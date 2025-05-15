@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# Expo Demo: Multi-Language Support & Font Size Selector 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Get started
+Welcome! This is a practice project built with [Expo](https://expo.dev) to demonstrate the implementation of:
 
-1. Install dependencies
+*   🌐 **Multi-Language Support:** Allow users to switch app languages dynamically.
+*   🔎 **Dynamic Font Size Selector:** Let users adjust text size for better accessibility and readability, managed globally with React Context API.
 
-   ```bash
-   npm install
-   ```
+This project serves as a learning exercise and a reference for implementing these common and important features in a React Native Expo application.
 
-2. Start the app
+<!-- Optional: Add a screenshot or GIF here! -->
+<!-- Example: -->
+<!-- ![App Demo](./.github/assets/app-demo.gif) -->
+<!-- *A simple screenshot or GIF would be great to quickly show the features.* -->
 
-   ```bash
-   npx expo start
-   ```
+## ✨ Features Demonstrated
 
-In the output, you'll find options to open the app in a
+*   **Language Switching:**
+    *   Implementation of a mechanism to change the application's display language (e.g., English, and other configured languages).
+    *   Dynamic text updates across different components based on the selected language using `react-i18next`.
+*   **Font Size Customization:**
+    *   A font size selector allowing users to choose from predefined sizes (e.g., Small, Medium, Large) or use a slider for granular control.
+    *   Global state management for font size using React Context API, ensuring consistent application across the app.
+*   **Expo Fundamentals:**
+    *   Built using Expo SDK (version 49+).
+    *   Utilizes Expo Router for file-based navigation.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Key Technologies Used
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+*   **Framework:** React Native with Expo (SDK 49+)
+*   **Language:** JavaScript / TypeScript
+*   **Internationalization (i18n):** `react-i18next` and `expo-localization`
+*   **State Management (for Font Size):** React Context API
+*   **Navigation:** Expo Router
+*   **Styling:** StyleSheet and inline styles
 
-## Get a fresh project
+## 🚀 Getting Started
 
-When you're ready, run:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Yuvi-97/rn-multilang-font-profile.git
+    cd rn-multilang-font-profile
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    # yarn install
+    ```
+
+## ▶️ Running the Demo
+
+Start the development server:
 
 ```bash
-npm run reset-project
+npx expo start
+````
+
+Then, follow the instructions in your terminal to open the app:
+
+* Scan the QR code with the Expo Go app on your iOS or Android phone.
+* Press `a` to open on an Android Emulator or connected device.
+* Press `i` to open on an iOS Simulator or connected device (requires macOS and Xcode).
+* Press `w` to open in a web browser.
+
+Explore the app to see the language switching and font size adjustment features in action!
+
+---
+
+---
+
+## 💬 Purpose of this Demo
+
+This project is primarily for learning and demonstration. It aims to provide a clear example of how to integrate multi-language capabilities and accessibility features like a font size selector in an Expo application using modern practices.
+
+Feel free to explore the code, experiment with it, and use it as a reference for your own projects!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
