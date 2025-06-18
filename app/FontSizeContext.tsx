@@ -6,18 +6,27 @@ const FontSizeContext = createContext({
   changeFontSizeMultiplier: (multiplier: number) => {},
 });
 
-export const FontSizeProvider = ({ children }: { children: React.ReactNode }) => {
+export const FontSizeProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const [fontSizeMultiplier, setFontSizeMultiplier] = useState<number>(1);
 
   useEffect(() => {
     const loadFontSize = async () => {
       try {
-        const savedMultiplier = await AsyncStorage.getItem("fontSizeMultiplier");
+        const savedMultiplier = await AsyncStorage.getItem(
+          "fontSizeMultiplier"
+        );
         if (savedMultiplier !== null) {
           setFontSizeMultiplier(parseFloat(savedMultiplier));
         }
       } catch (error) {
-        console.error("Failed to load font size multiplier from AsyncStorage.", error);
+        console.error(
+          "Failed to load font size multiplier from AsyncStorage.",
+          error
+        );
       }
     };
     loadFontSize();
@@ -28,12 +37,17 @@ export const FontSizeProvider = ({ children }: { children: React.ReactNode }) =>
       await AsyncStorage.setItem("fontSizeMultiplier", multiplier.toString());
       setFontSizeMultiplier(multiplier);
     } catch (error) {
-      console.error("Failed to save font size multiplier to AsyncStorage.", error);
+      console.error(
+        "Failed to save font size multiplier to AsyncStorage.",
+        error
+      );
     }
   };
 
   return (
-    <FontSizeContext.Provider value={{ fontSizeMultiplier, changeFontSizeMultiplier }}>
+    <FontSizeContext.Provider
+      value={{ fontSizeMultiplier, changeFontSizeMultiplier }}
+    >
       {children}
     </FontSizeContext.Provider>
   );

@@ -1,6 +1,8 @@
 import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Slider from "@react-native-community/slider";
+import { useRouter } from "expo-router";
+import { TextAa, Translate, User } from "phosphor-react-native";
 import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -15,8 +17,6 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import FontSizeContext from "./FontSizeContext";
-import { Translate, TextAa, User } from "phosphor-react-native";
-import { useRouter } from "expo-router";
 
 const languageList = [
   {

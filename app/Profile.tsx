@@ -1,19 +1,22 @@
 import { Feather } from "@expo/vector-icons"; // For menu and settings icons
 import AntDesign from "@expo/vector-icons/AntDesign";
 import * as ImagePicker from "expo-image-picker";
+import { useRouter } from "expo-router";
+import { CaretLeft } from "phosphor-react-native";
 import React, { useState } from "react";
 import {
   Alert,
   Image,
   Modal,
+  SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-
 export default function Profile() {
+  const router = useRouter();
   const [image, setImage] = useState<string | null>(null);
   const [permissionStatus, requestPermission] =
     ImagePicker.useMediaLibraryPermissions();
@@ -101,10 +104,10 @@ export default function Profile() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.iconRow}>
-        <TouchableOpacity>
-          <Feather name="menu" size={28} color="black" />
+        <TouchableOpacity onPress={() => router.back()}>
+          <CaretLeft size={32} />
         </TouchableOpacity>
 
         <Text style={styles.title}>Profile</Text>
@@ -120,7 +123,7 @@ export default function Profile() {
             <Image source={{ uri: image }} style={styles.image} />
           ) : (
             <View style={styles.placeholder}>
-              <AntDesign name="user" size={75} color="gray" />
+              <AntDesign name="user" size={75} color="black" />
             </View>
           )}
         </TouchableOpacity>
@@ -147,15 +150,16 @@ export default function Profile() {
           </View>
         </TouchableWithoutFeedback>
       </Modal>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 20,
+    paddingTop: 50,
     paddingHorizontal: 20,
     flex: 1,
+    backgroundColor: "#EAE4D5",
   },
   iconRow: {
     flexDirection: "row",
@@ -184,7 +188,7 @@ const styles = StyleSheet.create({
     borderRadius: 75,
     borderWidth: 2,
     borderColor: "black",
-    backgroundColor: "#eee",
+    backgroundColor: "#FFFFFF",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -194,9 +198,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   button: {
-    backgroundColor: "#D3D3D3",
+    backgroundColor: "#FFFFFF",
     padding: 10,
     borderRadius: 10,
+    borderColor: "black",
+    borderWidth: 2,
   },
   buttonText: {
     color: "black",
