@@ -1,16 +1,13 @@
 {
   "language": "Language",
   "home": {
-    "title": "Home",
-    "welcome": "Welcome",
-    "subtitle": "Sample i18n Application!",
-    "description": "This is a sample React Native app demonstrating how to implement internationalization (i18n) using react-i18next. The app allows users to seamlessly switch between multiple languages for a personalized experience.",
-    "exploringLanguages": "Discover Languages",
-    "exploringLanguagesDescription": "Click on country flags to view the app's content in different languages.",
-    "learnMore": "Want to Learn More?",
-    "repositoryLinkText": "Visit the project repository on GitHub",
-    "articlesLinkText": "Read more articles",
-    "userGuide":"User Guide",
-    "homePageMessage": "This is the Home page. Click on the top right option to switch to your preferred language."
+    "title": "Hello There!",
+    "welcome": "Hey! I'm Yuvaraj 👋",
+    "subtitle": "Passionate Full Stack Developer 🚀",
+    "description": "I'm a curious learner and tech enthusiast from SKCET, constantly exploring new tools and technologies to build impactful digital solutions.",
+    "exploringLanguages": "What Drives Me",
+    "exploringLanguagesDescription": "I enjoy solving real-world problems with code, participating hackathons 🏆, and contributing to open-source. Always up for learning new tech!",
+    "userGuide": "Let's Connect!",
+    "homePageMessage": "Whether it’s tech talk or collaboration, I’m always open to new ideas. Check out my projects and let’s build something amazing!"
   }
 }
